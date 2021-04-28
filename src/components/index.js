@@ -16,3 +16,4 @@ export * from './FeaturedProducts';
 export * from './Filters';
 export * from './Checkbox';
 export * from './ProductsGrid';
+export * from './Search';

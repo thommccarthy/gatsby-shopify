@@ -13,6 +13,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <SEO
+        description="Planty McPlantpants Store Home"
+        title="Planty McPlantpants Store"
+      />
       <HomepageCollectionsGrid
         collections={collections.filter(
           collection => collection.title !== 'Featured Plants'

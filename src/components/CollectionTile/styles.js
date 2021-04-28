@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { StyledLink } from '../StyledLink';
 
 export const CollectionTileWrapper = styled.div`
   height: 400px;
@@ -21,11 +22,29 @@ export const CollectionTileContent = styled.div`
   height: 100%;
   color: white;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   text-align: center;
 
   > div {
     padding: 20px;
+
+    ${StyledLink} {
+      padding: 10px 10px;
+      background: white;
+      border: 3px solid black;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      display: inline-block;
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background: black;
+      }
+    }
   }
 `;
 
