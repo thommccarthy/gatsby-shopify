@@ -1,14 +1,5 @@
-# Gatsby Shopify starter
+# Planty McPlantpants
 
-**Getting started**
+**Built with Gatsby, Shopify, and Styled Components**
 
-First you'll need to add a `.env` file to the root of your project consisting of:
-
-```
-GATSBY_SHOP_NAME=
-GATSBY_ACCESS_TOKEN=
-```
-
-And enter the appropriate values from your own shopify store.
-
-Then run `gatsby develop` and you're off to the races!
+A fictional plant store using Gatsby JS/GraphQl to fetch and display data from Shopify CMS. Using 'styled-components' for dynamic styling.
