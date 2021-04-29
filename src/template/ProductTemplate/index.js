@@ -25,7 +25,7 @@ export default function ProductTemplate(props) {
   const [product, setProduct] = React.useState(null);
   const [selectedVariant, setSelectedVariant] = React.useState(null);
   const { search, origin, pathname } = useLocation();
-  console.log(search, origin, pathname);
+
   const variantId = queryString.parse(search).variant;
 
   React.useEffect(() => {
@@ -106,5 +106,3 @@ export default function ProductTemplate(props) {
     </Layout>
   );
 }
-
-// export default ProductTemplate;
