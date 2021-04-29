@@ -21,4 +21,8 @@ export const CartWrapper = styled(StyledLink).attrs(() => ({
   &:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 400px) {
+    margin-top: 4px;
+  }
 `;

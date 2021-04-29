@@ -20,6 +20,7 @@ export function Header() {
         />
       </Link>
       <HeaderWrapper>
+        <div />
         <Search />
         <Cart />
       </HeaderWrapper>
