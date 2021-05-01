@@ -1,6 +1,6 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 export function SEO({ description, lang, meta = [], title }) {
   const { site } = useStaticQuery(
@@ -15,9 +15,9 @@ export function SEO({ description, lang, meta = [], title }) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -34,6 +34,11 @@ export function SEO({ description, lang, meta = [], title }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:image`,
+          content:
+            'https://lh3.googleusercontent.com/Y56PVK1qecBnysrLrpRnWljj0CcDlo6PbAS-4lg4j-V9Oyd-DTR-yk5imS6M90Wz8kPnd8xMYxl3yBUCCbyp5Eax2D6aECUE2zA4_4no8zuSwWum4wWtFkvCsNNbokqt0GlWuNYi8A=w2400',
         },
         {
           property: `og:description`,
@@ -61,5 +66,5 @@ export function SEO({ description, lang, meta = [], title }) {
         },
       ].concat(meta)}
     />
-  )
+  );
 }
