@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import Client from 'shopify-buy';
 
+//connect to shopify API 
 const client = Client.buildClient({
   domain: `${process.env.GATSBY_SHOP_NAME}.myshopify.com`,
   storefrontAccessToken: process.env.GATSBY_ACCESS_TOKEN,
 });
 
+//set default state to empty object
 const defaultState = {
   cart: {},
 };
 
+//initialize and export context API hook
 const CartContext = React.createContext(defaultState);
 export default CartContext;
 
+//export provider component 
 export function CartContextProvider({ children }) {
   const [checkout, setCheckout] = useState(
     JSON.parse(
@@ -20,9 +24,11 @@ export function CartContextProvider({ children }) {
     )
   );
 
+
   const [successfulOrder, setSuccessfulOrder] = useState(null);
   const checkoutId = checkout?.id;
 
+  // fetch from local storage and put into local state
   React.useEffect(() => {
     const getCheckout = async () => {
       if (checkoutId && typeof window !== 'undefined') {
@@ -46,6 +52,8 @@ export function CartContextProvider({ children }) {
     return product;
   }
 
+
+  
   const updateLineItem = async ({ variantId, quantity }) => {
     // if no checkout id, create a new checkout
     let newCheckout = checkout || (await client.checkout.create());
